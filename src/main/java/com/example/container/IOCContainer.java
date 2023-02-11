@@ -80,11 +80,6 @@ public class IOCContainer {
                 .filter(field -> field.isAnnotationPresent(Autowired.class))
                 .forEach(field -> setFields(bean, field));
     }
-
-
-    /**
-     *
-     */
     private void setFields(final Object bean, final Field field){
         final Class<?> fieldType = field.getType();
         field.setAccessible(true);
